@@ -1,35 +1,241 @@
-Privacy Policy for Offline Music
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Privacy Policy for Offline Music">
+  <title>Privacy Policy | Offline Music</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f6f3ee;
+      --surface: #ffffff;
+      --surface-alt: #fbf8f4;
+      --text: #1f2328;
+      --muted: #5e6672;
+      --accent: #2b5b84;
+      --accent-soft: #dce9f4;
+      --border: #e5ddd2;
+      --shadow: 0 18px 50px rgba(31, 35, 40, 0.08);
+      --radius: 22px;
+      --max: 900px;
+    }
 
-Effective Date: June 23, 2026
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(43, 91, 132, 0.12), transparent 30%),
+        radial-gradient(circle at top right, rgba(154, 118, 84, 0.12), transparent 26%),
+        var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
 
-Offline Music is an offline music player application designed to play audio files stored on your device.
+    .wrap {
+      width: min(100% - 32px, var(--max));
+      margin: 0 auto;
+      padding: 32px 0 56px;
+    }
 
-Information We Collect
-- Offline Music does not require you to create an account.
-- Offline Music does not collect, sell, or share your personal information.
-- The app may access local audio files on your device only to scan, display, and play music.
-- The app may store local settings such as playback preferences, sleep timer, equalizer settings, and playlists on your device.
+    .hero {
+      background: linear-gradient(180deg, var(--surface), var(--surface-alt));
+      border: 1px solid var(--border);
+      border-radius: calc(var(--radius) + 6px);
+      box-shadow: var(--shadow);
+      padding: 32px;
+      margin-bottom: 22px;
+    }
 
-Permissions Used
-- Storage / Media Audio: used to scan and play music files stored on your device.
-- Notifications: used to show playback controls and playback status if enabled.
-- Foreground service playback: used to continue music playback when permitted by the system.
-- Boot completed: used only for scheduled playback-related features such as alarms or timers if enabled.
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-weight: 700;
+      font-size: 0.92rem;
+      margin-bottom: 18px;
+    }
 
-How Data Is Stored
-- All playlists, settings, and playback preferences are stored locally on your device.
-- Offline Music does not upload your music library or settings to any server.
+    h1 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 1.1;
+      margin: 0 0 10px;
+      letter-spacing: -0.03em;
+    }
 
-Third-Party Services
-- Offline Music does not use third-party analytics, advertising SDKs, or tracking services.
+    .subtitle {
+      margin: 0;
+      color: var(--muted);
+      max-width: 70ch;
+      font-size: 1.04rem;
+    }
 
-Children’s Privacy
-- Offline Music is not intended to collect personal data from children.
-- If you believe data has been provided in error, please contact us.
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 28px;
+    }
 
-Changes to This Policy
-- We may update this policy from time to time.
-- The updated version will be posted with a new effective date.
+    section + section { margin-top: 18px; }
 
-Contact
-- If you have questions about this Privacy Policy, contact: your-email@example.com
+    h2 {
+      font-size: 1.2rem;
+      margin: 0 0 10px;
+      letter-spacing: -0.01em;
+    }
+
+    p { margin: 0 0 12px; }
+    ul { margin: 10px 0 14px; padding-left: 20px; }
+    li { margin: 6px 0; }
+
+    .meta {
+      display: grid;
+      gap: 12px;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      margin-top: 18px;
+    }
+
+    .meta div {
+      background: rgba(43, 91, 132, 0.05);
+      border: 1px solid rgba(43, 91, 132, 0.15);
+      border-radius: 16px;
+      padding: 14px 16px;
+    }
+
+    .meta span {
+      display: block;
+      color: var(--muted);
+      font-size: 0.88rem;
+      margin-bottom: 4px;
+    }
+
+    .contact {
+      display: inline-block;
+      color: var(--accent);
+      font-weight: 600;
+      text-decoration: none;
+      word-break: break-word;
+    }
+
+    .footer {
+      margin-top: 18px;
+      color: var(--muted);
+      font-size: 0.95rem;
+      text-align: center;
+    }
+
+    @media (max-width: 640px) {
+      .hero, .card { padding: 22px; }
+      .meta { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <header class="hero">
+      <div class="badge">Privacy Policy</div>
+      <h1>Offline Music</h1>
+      <p class="subtitle">This page explains how the Offline Music app handles user data, local storage, device permissions, and privacy-related practices.</p>
+      <div class="meta">
+        <div>
+          <span>Effective Date</span>
+          June 23, 2026
+        </div>
+        <div>
+          <span>App Type</span>
+          Offline music player
+        </div>
+      </div>
+    </header>
+
+    <article class="card">
+      <section>
+        <h2>1. Information We Collect</h2>
+        <p>Offline Music does not require account creation and does not collect personal information such as your name, email address, phone number, or location.</p>
+        <p>The app may access the following data stored on your device:</p>
+        <ul>
+          <li>Local audio files</li>
+          <li>Playlist data created by the user</li>
+          <li>Playback preferences and app settings</li>
+          <li>Equalizer and sleep timer settings</li>
+        </ul>
+        <p>This data is used only to provide app functionality.</p>
+      </section>
+
+      <section>
+        <h2>2. How We Use Information</h2>
+        <p>The app uses local device data only for the following purposes:</p>
+        <ul>
+          <li>Scanning and displaying music files</li>
+          <li>Playing audio stored on your device</li>
+          <li>Creating and managing playlists</li>
+          <li>Saving playback position and preferences</li>
+          <li>Supporting shuffle, repeat, equalizer, and sleep timer features</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>3. Data Storage</h2>
+        <p>All user data managed by Offline Music is stored locally on your device. This may include playlists, favorite tracks, playback settings, equalizer preferences, and library scan results.</p>
+        <p>Offline Music does not upload your music library or user settings to any external server.</p>
+      </section>
+
+      <section>
+        <h2>4. Data Sharing</h2>
+        <p>Offline Music does not sell, rent, or share user data with third parties.</p>
+        <p>The app does not use advertising networks, analytics SDKs, or tracking services.</p>
+      </section>
+
+      <section>
+        <h2>5. Permissions</h2>
+        <p>Offline Music may request the following permissions:</p>
+        <ul>
+          <li><strong>Audio / Storage access:</strong> to scan and play local music files</li>
+          <li><strong>Notifications:</strong> to show playback controls and status</li>
+          <li><strong>Foreground service:</strong> to support active playback when allowed by the system</li>
+          <li><strong>Boot completed:</strong> to restore scheduled playback-related features if enabled by the user</li>
+        </ul>
+        <p>These permissions are used only for app functionality.</p>
+      </section>
+
+      <section>
+        <h2>6. Third-Party Services</h2>
+        <p>Offline Music does not rely on third-party services for analytics, advertising, or user tracking.</p>
+        <p>If the app later integrates a third-party service, this policy will be updated accordingly.</p>
+      </section>
+
+      <section>
+        <h2>7. Children’s Privacy</h2>
+        <p>Offline Music is not intended to knowingly collect personal information from children. Since the app does not collect personal data, no child-specific user data is stored on our servers.</p>
+      </section>
+
+      <section>
+        <h2>8. Security</h2>
+        <p>Because the app stores data locally on the device, the security of that data depends on the security of the device itself.</p>
+      </section>
+
+      <section>
+        <h2>9. Changes to This Policy</h2>
+        <p>We may update this Privacy Policy from time to time. Any changes will be posted on this page with an updated effective date.</p>
+      </section>
+
+      <section>
+        <h2>10. Contact</h2>
+        <p>If you have any questions about this Privacy Policy, contact:</p>
+        <p><a class="contact" href="mailto:your-email@example.com">your-email@example.com</a></p>
+      </section>
+    </article>
+
+    <div class="footer">
+      Offline Music Privacy Policy
+    </div>
+  </main>
+</body>
+</html>
